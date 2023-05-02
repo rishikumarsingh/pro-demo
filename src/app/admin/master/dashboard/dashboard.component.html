@@ -1,0 +1,121 @@
+<div *ngIf="showspinner" class="load">
+    <img width="120" src="../../../assets/loader.gif">
+</div>
+
+<section class="cityvillagewrapper custom-form" style="padding:50px">
+
+    <h1>Thoughtwin Customer List</h1>
+
+    <mat-card class="heading_title">
+
+        <button mat-button>
+            <mat-icon>villa</mat-icon>
+            <span>Customer List</span>
+        </button>
+
+    </mat-card>
+
+    <form [formGroup]="customerForm" (ngSubmit)="customerFunction()">
+
+        <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+            <div fxFlex="50" fxFlex.md="100">
+                <mat-form-field floatLabel="always">
+                    <mat-label>Customer Name</mat-label>
+                    <input matInput type="text" placeholder="Enter Customer Name" formControlName="city" required />
+                </mat-form-field>
+            </div>
+            <div fxFlex="50" fxFlex.md="100">
+                <mat-form-field floatLabel="always">
+                    <mat-label>Comapny Name</mat-label>
+                    <input matInput type="text" placeholder="Enter Comapny Name" formControlName="village" required />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div fxLayout="row" fxLayout.lt-sm="column" fxLayoutGap="20px">
+            <div fxFlex="50" fxFlex.md="100">
+                <mat-form-field floatLabel="always">
+                    <mat-label>Salary</mat-label>
+                    <input matInput type="text" placeholder="Enter Salary Name" formControlName="district" required />
+                </mat-form-field>
+            </div>
+            <div fxFlex="50" fxFlex.md="100">
+                <mat-form-field floatLabel="always">
+                    <mat-label>City</mat-label>
+                    <input matInput type="text" placeholder="Enter City Name" formControlName="state" required />
+                </mat-form-field>
+            </div>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="end end" fxLayoutGap="5px">
+            <button mat-raised-button color="warn">Cancel</button>
+            <button mat-raised-button color="primary">Submit</button>
+        </div>
+
+    </form>
+
+    <div fxLayout="row" fxLayoutAlign="space-between center">
+
+        <div>
+            <mat-paginator class="paginator_top matpage_top" [pageSizeOptions]="[5, 10, 20,50]"></mat-paginator>
+        </div>
+
+
+        <div fxFlex="18" class="tablesearch">
+            <input class="inputetablesearch" matInput autocomplete="off" placeholder="Search">
+        </div>
+
+    </div>
+
+
+    <mat-table [dataSource]="dataSource">
+        <!-- Position Column -->
+        <ng-container matColumnDef="id">
+            <mat-header-cell *matHeaderCellDef> # </mat-header-cell>
+            <mat-cell *matCellDef="let element ; let i = index;">{{i+1}} </mat-cell>
+        </ng-container>
+
+        <!-- Name Column -->
+        <ng-container matColumnDef="city">
+            <mat-header-cell *matHeaderCellDef> Customer Name </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.city}} </mat-cell>
+        </ng-container>
+
+        <!-- Weight Column -->
+        <ng-container matColumnDef="village">
+            <mat-header-cell *matHeaderCellDef> Company Name </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.village}} </mat-cell>
+        </ng-container>
+
+        <!-- Symbol Column -->
+        <ng-container matColumnDef="district">
+            <mat-header-cell *matHeaderCellDef> Salary </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.district}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="state">
+            <mat-header-cell *matHeaderCellDef> City </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.state}} </mat-cell>
+        </ng-container>
+
+        <ng-container matColumnDef="action">
+            <mat-header-cell *matHeaderCellDef centeralign> Action </mat-header-cell>
+            <mat-cell *matCellDef="let element" centeralign>
+                <div class="action">
+                    <mat-icon class="edit" (click)="editCustomerfunction(element)">edit</mat-icon>
+                    <mat-icon class="delete" (click)="deleteCustomerfunction(element)">delete</mat-icon>
+                </div>
+            </mat-cell>
+        </ng-container>
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+    </mat-table>
+
+
+    <mat-paginator class="matpage_top" [hidePageSize]="true" [pageSizeOptions]="[5, 20,50]" showFirstLastButtons
+        aria-label="Select page of periodic elements">
+    </mat-paginator>
+
+
+</section>

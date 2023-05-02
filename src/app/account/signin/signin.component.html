@@ -1,0 +1,54 @@
+<div *ngIf="showspinner" class="load">
+    <img width="120" src="../../../assets/loader.gif">
+</div>
+
+<div fxLayout="row" fxLayout.lt-sm="column" class="main">
+
+    <div fxFlex="35" fxFlex.md="100" class="left_section">
+
+        <div fxLayout="column" fxLayoutAlign="center center">
+
+            <img class="rocket" src="../../../assets/logo_white.gif" alt="">
+           
+            <h1>Log-in Now</h1>
+
+        </div>
+        
+
+
+    </div>
+
+    <div fxFlex="65" fxFlex.md="100" class="right_section">
+
+        <form [formGroup]="loginForm" (ngSubmit)="loginFunction()">
+
+            <div fxLayout="column" fxLayoutAlign="start start">
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <input matInput placeholder="Email" formControlName="email">
+                </mat-form-field>
+
+                <mat-form-field appearance="outline">
+                    <mat-label>Enter your password</mat-label>
+                    <input matInput [type]="hide ? 'password' : 'text'" formControlName="password">
+                    <button type="button" mat-icon-button matSuffix (click)="hide = !hide"
+                        [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                </mat-form-field>
+
+                <button mat-raised-button color="primary">Submit</button>
+
+                <p class="already">Don't have an account? <span> Register Now</span> </p>
+
+                <p class="already"> Did You Forget the Password? <span> Forgot Password?</span></p>
+
+
+            </div>
+        </form>
+
+    </div>
+
+
+</div>

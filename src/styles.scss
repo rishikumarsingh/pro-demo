@@ -1,0 +1,234 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.load{
+    background: transparent;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    text-align: center;
+    overflow: hidden;
+    transition: .3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cursor{
+    cursor: not-allowed !important;
+}
+ // ************* matinput code **************//
+
+   .custom-form .mat-form-field .mat-input-element {
+     text-indent: 12px;
+     height: 40px;
+     font-size: 14px;
+     margin-top: 8px !important;
+     border-radius: 8px;
+     border: 1px solid #a8afbf !important;
+    }
+    
+    .custom-form .mat-form-field .mat-form-field-label{
+     font-size: 20px;
+     color: black !important;
+    }
+
+    .custom-form .mat-form-field{
+    display: block;
+    }
+
+    .custom-form .mat-form-field .mat-select{
+     font-size: 14px;
+     line-height: 39px;
+     height: 41px;
+     border-radius: 9px;
+     text-indent: 6px;
+     margin-top: 8px !important;
+     border: 1px solid #a8afbf !important;
+    }
+
+   .custom-form .mat-form-field .mat-form-field-underline{
+    display: none;
+    }
+
+    .mat-select-arrow {
+     margin-right: 12px !important;
+    }
+
+    .mat-form-field-infix{
+        width: auto !important;
+    }
+
+ // ************* matinput code **************//
+
+
+  
+    .heading_title{
+    box-shadow: rgb(0 0 0 /15%) 0px 0.5rem 1rem;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 5px !important;
+    background-color: #38b9f1;
+
+    button{
+        color: #fff;
+    }
+    mat-icon{
+        margin-right: 8px;
+    }
+    }
+
+
+    mat-table {
+        width: 100%;
+        margin-top: 20px;
+      }
+
+    .mat-header-row{
+        border-radius: 4px;
+        margin-bottom: 15px;
+        background-color: #38b9f1;
+
+    .mat-header-cell{
+        color: #ffffff !important;
+    }  
+
+    }
+
+
+    .paginator_top .mat-paginator-range-actions{
+        display: none !important;
+    }
+
+    .matpage_top{
+        font-weight: 400;
+        color: black;
+        font-size: 15px;
+    }
+
+    .mat-flat-button.mat-primary, .mat-raised-button.mat-primary, .mat-fab.mat-primary, .mat-mini-fab.mat-primary{
+        color: #ffffff;
+        background-color: #38b9f1 !important;
+        outline: none;
+
+    }
+
+    .mat-flat-button.mat-warn, .mat-raised-button.mat-warn, .mat-fab.mat-warn, .mat-mini-fab.mat-warn{
+        outline: none;
+    }
+
+
+    .inputetablesearch{
+        border: 1px solid #38b9f1 !important;
+        border-radius: 5px;
+        background-color: #fff;
+        height: 40px;
+    }
+
+    .tablesearch input.mat-input-element {
+        text-indent: 12px;
+        font-size: 14px;
+    }
+
+
+    .snake-success{
+        background-color: #1db808 !important;
+        color: #fff !important;
+        transition: all 0.5s ease-in-out 0s;
+        height: 30px;
+        margin-left: -2px;
+        }
+        .snake-success .mat-simple-snackbar-action{
+            color:#209e20;
+            background: white;
+            border-radius:36px;
+            width: 37px;
+            max-height: 39px;
+    }
+        .snake-error{
+        background-color: #f14141 !important;
+        color: #fff !important;
+        transition: all 0.5s ease-in-out 0s;
+        height: 30px;
+        margin-left: -2px;
+        }
+        .snake-error .mat-simple-snackbar-action{
+            color:#f14141;
+            background: white;
+            border-radius:36px;
+            width: 37px;
+            max-height: 39px;
+    }
+        .mat-snack-bar-container{
+        min-height: 55px !important;
+        padding: 17px 16px !important;
+        }
+    
+        
+    // ************* snack bar code **************//
+
+    // ************* table action **************//
+    .action mat-icon{
+        width: 24px;
+        height: 24px;
+        font-size: 20px;
+        border: 1px solid #4666ab;
+        border-radius: 18px;
+        line-height: 1;
+        padding: 3px;
+        margin-left: 4px;
+        cursor: pointer;
+    }
+
+    .action .edit{
+        color: green;
+    }
+    .action .delete{
+        color: red;
+    }
+    .action .edit:hover{
+        background: green;
+        color: white;
+    }
+    .action .delete:hover{
+        background: red;
+        color: white;
+    }
+
+    [centeralign]{
+        justify-content: center;
+    }
+
+    // ************* table action **************//
+
+    .scrollbarcustom{
+        overflow-x:auto;
+        overflow-y: auto;
+        scrollbar-width: thin !important;
+        width: 100%;
+    }
+
+
+    ::-webkit-scrollbar , .mat-table ::-webkit-scrollbar {
+    width: 18px
+    }
+    ::-webkit-scrollbar-thumb, .mat-table ::-webkit-scrollbar-thumb {
+    background-color: lavender;
+    border-radius: 16px;
+    border: 3px solid #fff
+    }
+    ::-webkit-scrollbar-thumb:hover , .mat-table ::-webkit-scrollbar-thumb:hover{
+    background-color: #a0c3f7;
+    border: 3px solid #f4f4f4
+    }
+
+    
+
+      

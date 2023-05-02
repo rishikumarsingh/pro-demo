@@ -1,0 +1,97 @@
+
+
+.main {
+    width: 100%;
+    background: linear-gradient(112deg,#020024,#00aeef 35%,#1b1e5b);
+    padding: 5%;
+
+}
+
+.main {
+    padding-left: 0 !important;
+}
+
+.left_section{
+    text-align: center;
+    padding: 0 50px;
+}
+
+#rocket {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 20%;
+    animation: mover 1s infinite alternate;
+    
+}
+
+
+.video {
+    background-position: 50%!important;
+    background-repeat: no-repeat!important;
+    background-size: 50%!important;
+    width: 300px;
+}
+
+.left_section h1{
+    text-transform: uppercase;
+    line-height: 60px;
+    color: #fff;
+    letter-spacing: 1px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.right_section {
+    background: #fff;
+    border-top-left-radius: 15% 50%;
+    border-bottom-left-radius: 15% 50%;
+    width: 100%;
+    padding: 13% 5% 13% 10%;
+}
+
+.mat-form-field {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1;
+    color: #495057;
+    background-color: #fff;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out,box-
+}
+
+.already {
+    display: flex;
+    color: #495057;
+    font-size: 16px;
+    padding-top: 10px;
+}
+
+.already span {
+    color: #1b1e5b;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 8px;
+}
+
+@media only screen and (max-width: 600px) {
+    
+    .bgcardcolor{
+        background-color: #3bc3ff;
+        padding: 20px 0px 0px 0px;
+    }
+    .cardpadding{
+        padding: 20px;
+    }
+
+    .already {
+        font-size: 13px;
+    }
+
+    .already span {
+        font-size: 13px;
+    }
+    
+  }
